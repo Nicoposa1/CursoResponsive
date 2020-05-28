@@ -1,0 +1,8 @@
+/* desktop first empezar desde el media querie mas grande*/
+.header{
+    display: block;
+    height: auto;
+}
+.header ol{
+    display: initial;
+}
