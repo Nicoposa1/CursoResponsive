@@ -133,8 +133,8 @@
         </form>
         <div class="social">
           <a href="https://twitter.com/nicoposa1"><i class="social-link icon-twitter"></i></a>
-          <a href="https://facebook.com/leonidas.esteban"><i class="social-link icon-facebook"></i></a>
-          <a href="https://github.com/leonidasesteban"><i class="social-link icon-github"></i></a>
+          <a href="https://es-la.facebook.com/nicolas.posa"><i class="social-link icon-facebook"></i></a>
+          <a href="https://github.com/Nicoposa1"><i class="social-link icon-github"></i></a>
           <a href="https://instagram.com/leonidasesteban"><i class="social-link icon-instagram"></i></a>
         </div>
       </div>
@@ -161,6 +161,8 @@
 
       const burgerButton = document.querySelector('#burger-menu')
       // console.log(burgerButton);
+
+      const links = document.querySelectorAll('.links')
       
       
       ipad.addListener(validation)
@@ -168,6 +170,9 @@
       function validation(event){
         if(event.matches){
           burgerButton.addEventListener('click', hideShow)
+          Array.from(links).forEach(link => {
+            links.addEventListener('click', hideShow)
+          })
         }else{
           burgerButton.removeEventListener('click', hideShow)
         }
