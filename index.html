@@ -162,7 +162,7 @@
       const burgerButton = document.querySelector('#burger-menu')
       // console.log(burgerButton);
 
-      const links = document.querySelectorAll('.links')
+      const links = document.querySelectorAll('.link')
       
       
       ipad.addListener(validation)
@@ -171,7 +171,7 @@
         if(event.matches){
           burgerButton.addEventListener('click', hideShow)
           Array.from(links).forEach(link => {
-            links.addEventListener('click', hideShow)
+            link.addEventListener('click', hideShow)
           })
         }else{
           burgerButton.removeEventListener('click', hideShow)
